@@ -133,6 +133,4 @@ zoom_plot(df_final_join, '02-25-2017', '02-26-2017',
 y_test_final = create_features(y_test)
 mae_year = y_test_final.groupby(['year'])['APE'].mean()
 mae_year_month = y_test_final.groupby(['year', 'month'])['APE'].mean()
-mae_year_quarter_month = y_test_final.groupby(
-    ['year', 'quarter', 'month'])['APE'].mean()
-mae_year_quarter_month.plot(figsize=(12, 5))
+mae_year_month.plot(figsize=(12, 5))
