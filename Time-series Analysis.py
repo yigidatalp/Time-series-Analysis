@@ -41,7 +41,7 @@ df_transformed = df[(df['PJMW_MW'] >= min_whisker_value) &
                     (df['PJMW_MW'] <= max_whisker_value)]
 df_transformed = df_transformed.sort_index()
 
-# Re-plot transformed dataset and sort it by date
+# Re-plot transformed dataset
 check_plot(df_transformed, 'PJMW_MW')
 
 # Feature creation
