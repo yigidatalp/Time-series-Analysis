@@ -104,7 +104,7 @@ model.fit(X_train, y_train,
 # Let's see which features are important
 plot_importance(model, height=0.9)
 
-# Time to predict
+# Time to make predictions
 predictions = model.predict(X_test)
 mae = mean_absolute_error(predictions, y_test)
 mape = mean_absolute_percentage_error(predictions, y_test)
