@@ -78,8 +78,7 @@ consumption_plot('hour', 'MW per Hour')
 consumption_plot('month', 'MW per Month')
 
 # MinMax Normalization
-features = ['hour', 'dayofweek', 'month', 'dayofmonth',
-            'quarter', 'year', 'dayofyear', 'weekofyear']
+features = [col for col in df_final.columns if col != 'PJMW_MW']
 for col in features:
     df_final[col] = (df_final[col] - df_final[col].min()) / \
         (df_final[col].max()-df_final[col].min())
