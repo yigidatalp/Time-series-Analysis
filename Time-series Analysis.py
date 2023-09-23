@@ -26,7 +26,7 @@ df.info()
 
 
 def check_plot(data, x):
-    data.plot(color='red', legend=False, figsize=(12, 5))
+    data.plot(legend=False, figsize=(12, 5))
     fig, ax = plt.subplots(2, 1, figsize=(12, 5))
     sns.histplot(data=data, x=x, ax=ax[0]).set(xlabel=None)
     sns.boxplot(data=data, x=x, ax=ax[1])
