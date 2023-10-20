@@ -93,7 +93,7 @@ corr.name = 'Corr_scores'
 X = df_final.drop(columns=['PJMW_MW'])
 y = df_final['PJMW_MW']
 
-# Calculate MI score,
+# Calculate MI score
 MI_score = pd.Series(mutual_info_regression(X, y), name='MI_scores')
 MI_score.index = X.columns
 
