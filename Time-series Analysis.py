@@ -9,6 +9,7 @@ from datetime import timedelta
 from sklearn.feature_selection import mutual_info_regression
 from sklearn.metrics import mean_absolute_percentage_error
 from sklearn.metrics import mean_absolute_error
+from sklearn.metrics import r2_score
 from xgboost import plot_importance
 from xgboost import XGBRegressor
 from xgboost import plot_tree
@@ -139,8 +140,9 @@ plt.savefig("decision_tree.pdf")
 
 # Time to make predictions
 predictions = model.predict(X_test)
-mae = mean_absolute_error(predictions, y_test)
-mape = mean_absolute_percentage_error(predictions, y_test)
+mae = mean_absolute_error(y_test, predictions)
+mape = mean_absolute_percentage_error(y_test, predictions)
+r_square = r2_score(y_test, predictions)
 
 y_test = y_test.reset_index()
 y_test['Predictions'] = predictions
