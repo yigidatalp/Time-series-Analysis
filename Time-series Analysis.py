@@ -27,11 +27,11 @@ df = df.sort_index()
 df.info()
 
 
-def check_plot(data, x):
+def check_plot(data, target):
     data.plot(legend=False, figsize=(12, 5))
     fig, ax = plt.subplots(2, 1, figsize=(12, 5))
-    sns.histplot(data=data, x=x, ax=ax[0]).set(xlabel=None)
-    sns.boxplot(data=data, x=x, ax=ax[1])
+    sns.histplot(data=data, x=target, ax=ax[0]).set(xlabel=None)
+    sns.boxplot(data=data, x=target, ax=ax[1])
 
 
 # Plot data to check if the shape of dataset isn't normal or there are outliers
