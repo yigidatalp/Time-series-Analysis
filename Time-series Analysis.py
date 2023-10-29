@@ -70,9 +70,9 @@ df_final = create_features(df_transformed)
 # Let's check electricity consumption per hour and month
 
 
-def consumption_plot(x, title):
+def consumption_plot(feature, title):
     fig, ax = plt.subplots(figsize=(12, 5))
-    sns.boxplot(data=df_final, x=x, y='PJMW_MW')
+    sns.boxplot(data=df_final, x=feature, y='PJMW_MW', ax=ax)
     ax.set_title(title)
 
 
